@@ -91,6 +91,7 @@ body {
 }
 
 .op {
+    font-size: 28px;
     color: lightgreen;
 }
 
@@ -104,4 +105,21 @@ body {
 
 .wide:hover {
     background-color: lightsalmon;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    width: 400px;
+    margin-top: 60px;
+    background-color: blue;
+    color:white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
