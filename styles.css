@@ -8,3 +8,12 @@ body {
     margin: 0px;
     background: linear-gradient(to right, white, gray);
 }
+
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Viewpoint Height */
+    min-height: 100vh;
+}
