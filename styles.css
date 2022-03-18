@@ -93,3 +93,15 @@ body {
 .op {
     color: lightgreen;
 }
+
+.row1:hover,
+.row2:hover,
+.row3:hover,
+.row4:hover,
+.row5:hover {
+    background-color: darkgray;
+}
+
+.wide:hover {
+    background-color: lightsalmon;
+}
