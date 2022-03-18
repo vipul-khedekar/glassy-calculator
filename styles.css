@@ -34,7 +34,7 @@ body {
 .buttons-container {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 440px;
     width: 400px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -50,6 +50,22 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    gap: 10px;
     height: 100px;
     width: 400px;
+    padding: 15px;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5 {
+    flex: 1;
+    height: 55px;
+    border-radius: 25px;
+}
+
+.wide {
+    flex:2.25;
 }
