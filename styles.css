@@ -17,3 +17,26 @@ body {
     /* Viewpoint Height */
     min-height: 100vh;
 }
+
+.display-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 140px;
+    width: 400px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: #22252d;
+    color: white;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #2a2d37;
+}
