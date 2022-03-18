@@ -85,16 +85,6 @@ body {
     color: white;
 }
 
-.wide {
-    flex:2.25;
-    background-color: orange;
-}
-
-.op {
-    font-size: 28px;
-    color: lightgreen;
-}
-
 .row1:hover,
 .row2:hover,
 .row3:hover,
@@ -103,8 +93,18 @@ body {
     background-color: darkgray;
 }
 
+.wide {
+    flex:2.25;
+    background-color: orange;
+}
+
 .wide:hover {
     background-color: lightsalmon;
+}
+
+.op {
+    font-size: 28px;
+    color: lightgreen;
 }
 
 .footer {
