@@ -40,3 +40,16 @@ body {
     border-bottom-right-radius: 25px;
     background-color: #2a2d37;
 }
+
+.row1-container,
+.row2-container,
+.row3-container,
+.row4-container,
+.row5-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 400px;
+}
