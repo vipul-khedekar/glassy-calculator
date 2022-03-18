@@ -6,7 +6,7 @@
 body {
     padding: 0px;
     margin: 0px;
-    background: linear-gradient(to right, white, gray);
+    background: linear-gradient(to right, rgb(255, 255, 255, 1.0), rgb(128, 128, 128, 1.0));
 }
 
 .calculator-container {
@@ -27,14 +27,13 @@ body {
     width: 400px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    background-color: #22252d;
-    color: white;
+    background-color: rgb(34, 37, 45, 1.0);
 }
 
 .previous,
 .current {
     padding: 15px;
-    color: white;
+    color: rgb(255, 255, 255, 0.9);
 }
 
 .previous {
@@ -53,7 +52,7 @@ body {
     width: 400px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    background-color: #2a2d37;
+    background-color: rgb(42, 45, 55, 1.0);
 }
 
 .row1-container,
@@ -81,8 +80,8 @@ body {
     border: 0;
     border-radius: 25px;
     font-size: 22px;
-    background-color: #22252d;
-    color: white;
+    background-color: rgb(34, 37, 45, 0.6);
+    color: rgb(255, 255, 255, 0.9)
 }
 
 .row1:hover,
@@ -90,21 +89,21 @@ body {
 .row3:hover,
 .row4:hover,
 .row5:hover {
-    background-color: darkgray;
+    background-color: rgb(169, 169, 169, 0.9);
 }
 
 .wide {
     flex:2.25;
-    background-color: orange;
+    background-color: rgb(247, 151, 54, 1.0);
 }
 
 .wide:hover {
-    background-color: lightsalmon;
+    background-color: rgb(247, 151, 54, 0.8)
 }
 
 .op {
     font-size: 28px;
-    color: lightgreen;
+    color: rgb(144, 238, 144, 0.9);
 }
 
 .footer {
@@ -114,12 +113,13 @@ body {
     align-items: center;
     height: 80px;
     width: 400px;
+    border-radius: 15px;
     margin-top: 60px;
-    background-color: blue;
-    color:white;
+    background-color: rgb(192, 192, 192, 0.1);
+    color: rgb(0, 0, 0, 1.0)
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0, 1.0);
 }
