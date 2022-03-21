@@ -16,14 +16,22 @@ class CALCULATOR {
     allClear() {
         this.previousOperand = ``;
         this.currentOperand = ``;
+        this.operator = ``
     }
 
     updateDisplay() {
+        this.previousDisplayText.innerText = this.previousOperand + this.operator;
         this.currentDisplayText.innerText = this.currentOperand;
     }
 
     takeOperand(operand) {
         this.currentOperand = this.currentOperand + operand;
+    }
+
+    takeOperator(operator) {
+        this.operator = operator;
+        this.previousOperand = this.currentOperand;
+        this.currentOperand = ``;
     }
 }
 
@@ -32,11 +40,18 @@ const calculator = new CALCULATOR(previousDisplayText, currentDisplayText);
 allClearButton.addEventListener(`click`, () => {
     calculator.allClear();
     calculator.updateDisplay(); 
-})
+});
 
 operandButtons.forEach((button) => {
     button.addEventListener(`click`, () => {
         calculator.takeOperand(button.innerText);
+        calculator.updateDisplay();
+    });
+});
+
+operatorButtons.forEach((button) => {
+    button.addEventListener(`click`, () => {
+        calculator.takeOperator(button.innerText);
         calculator.updateDisplay();
     });
 });
