@@ -12,3 +12,5 @@ class calculator {
         this.currentDisplayText = currentDisplayText;
     }
 }
+
+const calculatorApp = new calculator(previousDisplayText, currentDisplayText);
