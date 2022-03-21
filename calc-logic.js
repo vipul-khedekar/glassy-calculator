@@ -34,9 +34,11 @@ class CALCULATOR {
     }
 
     takeOperator(operator) {
-        this.operator = operator;
-        this.previousOperand = this.currentOperand;
-        this.currentOperand = ``;
+        if(this.currentOperand !== ``) {
+            this.operator = operator;
+            this.previousOperand = this.currentOperand;
+            this.currentOperand = ``;
+        }
     }
 }
 
