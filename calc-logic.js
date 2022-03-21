@@ -68,6 +68,10 @@ class CALCULATOR {
         this.operator = ``;
         this.previousOperand = ``;
     }
+
+    delete() {
+        this.currentOperand = this.currentOperand.substr(0,this.currentOperand.length-1);
+    }
 }
 
 const calculator = new CALCULATOR(previousDisplayText, currentDisplayText);
@@ -95,3 +99,8 @@ equalsButton.addEventListener(`click`, () => {
     calculator.compute();
     calculator.updateDisplay();
 });
+
+deleteButton.addEventListener(`click`, () => {
+    calculator.delete();
+    calculator.updateDisplay();
+})
