@@ -6,11 +6,11 @@ const equalsButton = document.querySelector(`[data-equals]`);
 const previousDisplayText = document.querySelector(`[data-display-previous]`);
 const currentDisplayText = document.querySelector(`[data-display-current]`);
 
-class calculator {
+class CALCULATOR {
     constructor(previousDisplayText, currentDisplayText) {
         this.previousDisplayText = previousDisplayText;
         this.currentDisplayText = currentDisplayText;
     }
 }
 
-const calculatorApp = new calculator(previousDisplayText, currentDisplayText);
+const calculator = new CALCULATOR(previousDisplayText, currentDisplayText);
