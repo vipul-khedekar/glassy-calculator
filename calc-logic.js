@@ -12,6 +12,11 @@ class CALCULATOR {
         this.currentDisplayText = currentDisplayText;
     }
 
+    allClear() {
+        this.previousOperand = ``;
+        this.currentOperand = ``;
+    }
+
     updateDisplay() {
         this.currentDisplayText.innerText = this.currentOperand;
     }
@@ -22,6 +27,11 @@ class CALCULATOR {
 }
 
 const calculator = new CALCULATOR(previousDisplayText, currentDisplayText);
+
+allClearButton.addEventListener(`click`, () => {
+    calculator.allClear();
+    calculator.updateDisplay();
+})
 
 operandButtons.forEach((button) => {
     button.addEventListener(`click`, () => {
