@@ -10,6 +10,7 @@ class CALCULATOR {
     constructor(previousDisplayText, currentDisplayText) {
         this.previousDisplayText = previousDisplayText;
         this.currentDisplayText = currentDisplayText;
+        this.allClear();
     }
 
     allClear() {
@@ -22,7 +23,7 @@ class CALCULATOR {
     }
 
     takeOperand(operand) {
-        this.currentOperand = operand;
+        this.currentOperand = this.currentOperand + operand;
     }
 }
 
@@ -30,7 +31,7 @@ const calculator = new CALCULATOR(previousDisplayText, currentDisplayText);
 
 allClearButton.addEventListener(`click`, () => {
     calculator.allClear();
-    calculator.updateDisplay();
+    calculator.updateDisplay(); 
 })
 
 operandButtons.forEach((button) => {
