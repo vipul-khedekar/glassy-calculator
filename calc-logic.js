@@ -25,7 +25,12 @@ class CALCULATOR {
     }
 
     takeOperand(operand) {
-        this.currentOperand = this.currentOperand + operand;
+        if(operand === `.` && this.currentOperand.includes(`.`)) {
+            return;
+        }
+        if(this.currentOperand.length <= 10) {
+            this.currentOperand = this.currentOperand + operand;
+        }
     }
 
     takeOperator(operator) {
