@@ -11,6 +11,21 @@ class CALCULATOR {
         this.previousDisplayText = previousDisplayText;
         this.currentDisplayText = currentDisplayText;
     }
+
+    updateDisplay() {
+        this.currentDisplayText.innerText = this.currentOperand;
+    }
+
+    takeOperand(operand) {
+        this.currentOperand = operand;
+    }
 }
 
 const calculator = new CALCULATOR(previousDisplayText, currentDisplayText);
+
+operandButtons.forEach((button) => {
+    button.addEventListener(`click`, () => {
+        calculator.takeOperand(button.innerText);
+        calculator.updateDisplay();
+    });
+});
