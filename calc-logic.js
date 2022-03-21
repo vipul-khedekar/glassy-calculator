@@ -34,11 +34,39 @@ class CALCULATOR {
     }
 
     takeOperator(operator) {
-        if(this.currentOperand !== ``) {
-            this.operator = operator;
-            this.previousOperand = this.currentOperand;
-            this.currentOperand = ``;
+        if(this.currentOperand === ``) {
+            return;
         }
+        if(this.currentOperand !== ``) {
+            this.compute();
+        }
+        this.operator = operator;
+        this.previousOperand = this.currentOperand;
+        this.currentOperand = ``;
+    }
+
+    compute() {
+        let result;
+        const previous = parseFloat(this.previousOperand);
+        const current = parseFloat(this.currentOperand);
+        if(isNaN(previous) || isNaN(current)) {
+            return;
+        }
+        if(this.operator === `+`) {
+            result = previous + current;
+        }
+        if(this.operator === `-`) {
+            result = previous - current;
+        }
+        if(this.operator === `×`) {
+            result = previous * current;
+        }
+        if(this.operator === `÷`) {
+            result = previous / current;
+        }
+        this.currentOperand = result;
+        this.operator = ``;
+        this.previousOperand = ``;
     }
 }
 
@@ -61,4 +89,9 @@ operatorButtons.forEach((button) => {
         calculator.takeOperator(button.innerText);
         calculator.updateDisplay();
     });
+});
+
+equalsButton.addEventListener(`click`, () => {
+    calculator.compute();
+    calculator.updateDisplay();
 });
