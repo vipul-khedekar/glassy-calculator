@@ -21,7 +21,10 @@ class CALCULATOR {
 
     updateDisplay() {
         this.previousDisplayText.innerText = this.previousOperand + this.operator;
-        this.currentDisplayText.innerText = this.currentOperand;
+        this.currentDisplayText.innerText = this.currentOperand.toString().substr(0,10);
+        if(this.currentDisplayText.innerText.at(9) === `.`) {
+            this.currentDisplayText.innerText = this.currentOperand.toString().substr(0,9);
+        }
     }
 
     takeOperand(operand) {
